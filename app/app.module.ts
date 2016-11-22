@@ -12,6 +12,13 @@ import { PlaceholderComponent} from './placeholder/placeholder.component';
 import { RefService } from './ref/ref.service';
 import { PlaceholderService } from './placeholder/placeholder.service';
 
+/**
+ * 
+ * 
+ * @export
+ * @class AppModule
+ */
+
 @NgModule({
   declarations: [
     AppComponent,

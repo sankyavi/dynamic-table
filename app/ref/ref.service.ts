@@ -1,6 +1,12 @@
 import { Injectable } from '@angular/core';
 import  { Http , Response } from '@angular/http';
 
+/**
+ * 
+ * 
+ * @export
+ * @class RefService
+ */
 @Injectable()
 export class RefService{
     constructor(private http: Http){}

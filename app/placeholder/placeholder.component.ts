@@ -3,6 +3,12 @@ import { Http, Response } from '@angular/http';
 
 import { PlaceholderService } from './placeholder.service';
 
+/**
+ * @author Avinash 
+ * @implements calls placeholder json service to fetch data 
+ * @export
+ * @class PlaceholderComponent
+ */
 @Component({ templateUrl: './app/placeholder/placeholder.component.html' })
 
 

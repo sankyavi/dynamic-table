@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ViewChild , AfterViewInit , ElementRef} from '@angular/core';
 import { Http, Response } from '@angular/http';
 
 import { PlaceholderService } from './placeholder.service';
@@ -12,11 +12,21 @@ import { PlaceholderService } from './placeholder.service';
 @Component({ templateUrl: './app/placeholder/placeholder.component.html' })
 
 
-export class PlaceholderComponent {
+export class PlaceholderComponent implements AfterViewInit  {
 
+   @ViewChild('tabs') tab : ElementRef;
+    
     posts: string[];
     headers: string[];
     loading : boolean = false;
+
+    ngAfterViewInit(){
+        console.log(this.tab);
+        console.log(this.tab.nativeElement);
+        console.log(this.tab.nativeElement.children);
+    }
+
+    
 
     constructor(private http: Http, private _plaveholderservice: PlaceholderService) { }
 

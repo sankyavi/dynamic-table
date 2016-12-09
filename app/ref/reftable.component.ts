@@ -22,7 +22,7 @@ export class RefTableComponent {
   constructor(private route: ActivatedRoute, private http: Http, private _refService: RefService) { }
 
   private ngOnInit() {
-    this.sub = this.route.params
+    this.route.params
       .map(params => params['id'])
       .switchMap(id => this._refService.getData(id))
       .retry(2)
@@ -38,9 +38,10 @@ export class RefTableComponent {
       )
   }
 
-  private ngOnDestroy() {
-    this.sub.unsubscribe();
-  }
+  //not needed to unsubscribe because it will be auto garbage collected inc the observable on destroying component 
+  // private ngOnDestroy() {
+  //   this.sub.unsubscribe();
+  // }
 
   generateArray(obj) {
     return Object.keys(obj).map((key) => {

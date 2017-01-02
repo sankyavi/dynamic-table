@@ -1,2 +1,27 @@
-<h4>Dashboard Page</h4>
-<p>Please select a master from the sidebar</p>
+<h3>Masters</h3>
+<p>Dashboard > Admin > Masters</p>
+
+<autocomplete></autocomplete>
+
+
+
+
+<p *ngFor="let col of cols.headers ">
+      <input type="checkbox"  [(ngModel)]="col.show"/>
+      <label>{{  col.title  }}</label>
+</p>
+
+<table class="striped centered">
+    <tr></tr>
+    <td></td>
+</table>
+
+<div class="fixed-action-btn horizontal">
+    <a class="btn-floating btn-large red">
+        <i class="large material-icons">settings</i>
+    </a>
+    <ul>
+        <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+        <li><a (click)="showColumnsToggle()" class="btn-floating blue"><i class="material-icons">list</i></a></li>
+    </ul>
+</div>

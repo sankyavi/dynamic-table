@@ -10,18 +10,18 @@ export class AppComponent {
 
     constructor(private router: Router) { }
 
-    onClick() {
-    this.router.navigate(['reference-details', "CoverageMaster"]);
-    }
+    // onClick() {
+    // this.router.navigate(['reference-details', "CoverageMaster"]);
+    // }
 
-    onClick2() {
-        this.router.navigate(['reference-details', "KungFuMaster"]);
-    }
+    // onClick2() {
+    //     this.router.navigate(['reference-details', "KungFuMaster"]);
+    // }
 
-    onClick3() {
-        this.router.navigate(['reference-details', "DinoMaster"]);
-    }
+    // onClick3() {
+    //     this.router.navigate(['reference-details', "DinoMaster"]);
+    // }
     onClick4() {
-        this.router.navigate(['placeholder-details']);
+        this.router.navigate(['dashboard']);
     }
 }

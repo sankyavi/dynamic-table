@@ -5,8 +5,8 @@ import { PlaceholderService } from './placeholder.service';
 
 /**
  * @author Avinash 
- * @implements calls placeholder json service to fetch data 
- * @export
+ * @implements calls placeholder service to fetch data 
+ * @export PlaceholderComponent
  * @class PlaceholderComponent
  */
 @Component({ templateUrl: './app/placeholder/placeholder.component.html' })
@@ -28,10 +28,10 @@ export class PlaceholderComponent implements AfterViewInit  {
 
     
 
-    constructor(private http: Http, private _plaveholderservice: PlaceholderService) { }
+    constructor(private http: Http, private _placeholderservice: PlaceholderService) { }
 
     getServiceData(method: string) {
-        this._plaveholderservice.getData(method).subscribe(
+        this._placeholderservice.getData(method).subscribe(
             data => {
                 this.posts = data.json();
             },

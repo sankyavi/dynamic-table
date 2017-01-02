@@ -1,0 +1,21 @@
+<hr>
+<br>
+<div class="input-field col s9">
+    <i class="material-icons prefix">mode_edit</i>
+    <input id="master" type="text" class="validate filter-input" [(ngModel)]=query (keyup)=filter()>
+    <label for="master">Master</label>
+</div>
+<div class="col s3">
+   <button class="btn waves-effect waves-light" (click)="onClick()">Search
+    <i class="material-icons right">search</i>
+  </button>
+</div>
+<div class="suggestions col s12" *ngIf="filteredList.length > 0">
+    <ul *ngFor="let item of filteredList">
+        <li>
+            <a (click)="select(item)">{{item}}</a>
+        </li>
+    </ul>
+</div>
+
+<br>

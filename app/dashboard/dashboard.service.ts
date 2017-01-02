@@ -7,10 +7,10 @@ import  { Http , Response } from '@angular/http';
  * 
  * 
  * @export
- * @class RefService
+ * @class DashboardService
  */
 @Injectable()
-export class RefService{
+export class DashboardService{
     constructor(private http: Http){}
 
     getData(id : number) {

@@ -2,19 +2,51 @@
 <p>Dashboard > Admin > Masters</p>
 
 <autocomplete></autocomplete>
+<advanced-search></advanced-search>
 
+<!-- Switch -->
+<div class="row" *ngIf="showcolumncontrol">
+    <div class="switch" *ngFor="let col of cols.headers">
+        <span class="col s2 m2">{{  col.title  }}</span>
+        <label>
+      Off
+      <input type="checkbox" [(ngModel)]="col.show" *ngIf="col.editable">
+      <span class="lever"></span>
+      On
+    </label>
+    </div>
+</div>
 
-
-
-<p *ngFor="let col of cols.headers ">
-      <input type="checkbox"  [(ngModel)]="col.show"/>
-      <label>{{  col.title  }}</label>
-</p>
+<!--<div class="row" *ngIf="showcolumncontrol">
+    <div class="switch" *ngFor="let col of cols.headers">
+        <span class="col s2 m2" *ngIf="col.editable">{{  col.title  }}</span>
+        <label *ngIf="col.editable">
+      Off
+      <input type="checkbox" [(ngModel)]="col.show" >
+      <span class="lever"></span>
+      On
+    </label>
+    </div>
+</div>-->
 
 <table class="striped centered">
-    <tr></tr>
-    <td></td>
+    <thead>
+        <tr>
+            <th *ngFor="let col of cols.headers"><span *ngIf="col.show">{{col.title}}</span></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of data.data">
+            <td *ngFor="let col of cols.headers; let i = index;" [style.background]="getStyle(data.status,i)">
+                <span *ngIf="col.show"  (click)="goto(data.name)">
+                    {{data[col.field]}}
+                </span>
+            </td>
+        </tr>
+    </tbody>
 </table>
+<br>
+<hr>
 
 <div class="fixed-action-btn horizontal">
     <a class="btn-floating btn-large red">

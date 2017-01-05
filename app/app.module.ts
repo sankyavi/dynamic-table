@@ -11,6 +11,7 @@ import { RefTableComponent }  from './ref/reftable.component';
 import { PlaceholderComponent } from './placeholder/placeholder.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { DummyComponent } from './dummy/dummy.component';
+import { AdvancedSearchComponent } from './advancedsearch/advanced-search.component';
 
 import { RefService } from './ref/ref.service';
 import { PlaceholderService } from './placeholder/placeholder.service';
@@ -29,7 +30,8 @@ import { PlaceholderService } from './placeholder/placeholder.service';
     DashboardComponent,
     PlaceholderComponent,
     AutocompleteComponent,
-    DummyComponent
+    DummyComponent,
+    AdvancedSearchComponent
   ],
   imports: [
     BrowserModule,

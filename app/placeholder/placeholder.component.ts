@@ -5,7 +5,7 @@ import { PlaceholderService } from './placeholder.service';
 
 /**
  * @author Avinash 
- * @implements calls placeholder service to fetch data 
+ * @description calls placeholder service to fetch data 
  * @export PlaceholderComponent
  * @class PlaceholderComponent
  */

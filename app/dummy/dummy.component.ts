@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 
 /**
- * @implements The Dashboard containing the list of masters
+ * @description The Dashboard containing the list of masters
  * @author Avinash 
  * @export DashboardComponent
  * @class DashboardComponent

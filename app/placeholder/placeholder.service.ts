@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import  { Http , Response } from '@angular/http';
 
-import 'rxjs/Rx';
+// **Important **Do not import the full Rx library (~ 1MB), choose your operator which might be few kilobytes
+//import 'rxjs/Rx';
+import 'rxjs/add/operator/map';
 
 /**
- * @implements calls the service and return a Http response object 
+ * @description calls the service and return a Http response object 
  * @author Avinash 
- * @export
+ * @export PlaceholderService
  * @class PlaceholderService
  */
 @Injectable()

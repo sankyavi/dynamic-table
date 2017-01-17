@@ -2,7 +2,17 @@ import { Component } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { ActivatedRoute } from '@angular/router';
 
+import 'rxjs/add/operator/switchMap';
+import 'rxjs/add/operator/retry';
+
 import { RefService } from './ref.service';
+
+/**
+ * @author Avinash 
+ * @description calls placeholder service to fetch data 
+ * @export PlaceholderComponent
+ * @class PlaceholderComponent
+ */
 
 @Component({ templateUrl: './app/ref/reftable.component.html' })
 
